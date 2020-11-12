@@ -3,8 +3,8 @@
   cursor: pointer;
   height: 40px;
   display: flex;
-  font-size: 12px;
   align-items: center;
+  font-size: 12px;
   padding: 10px;
   transition: 200ms color ease-in;
 }
@@ -18,6 +18,5 @@
 
 .sidebaroptions > p {
   margin-top: 10px;
-  margin-left: 20px;
-  font-size: 12px;
+  font-size: 14px;
 }

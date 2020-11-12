@@ -1,0 +1,18 @@
+.Icons {
+  display: flex;
+  align-items: center;
+}
+
+.Icons > .MuiSvgIcon-root {
+  margin-right: 20px;
+}
+
+.body_play {
+  font-size: 80px;
+  margin: 20px 50px 20px 0px;
+}
+
+.body_play:hover {
+  transition: 200ms transform ease-in;
+  transform: scale(1.08);
+}

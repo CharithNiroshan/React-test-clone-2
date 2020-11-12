@@ -1,0 +1,24 @@
+.body_info {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.body_infotext {
+  flex: 1;
+}
+
+.body_infotext > h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.body_infotext > p {
+  font-size: 14px;
+}
+
+.body_info > img {
+  height: 12vw;
+  margin: 0 20px;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}

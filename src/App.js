@@ -1,27 +1,39 @@
 import { useEffect, useState } from "react";
 import SpotifyWebApi from "spotify-web-api-js";
-import Login from "./Components/Login";
+import Login from "./Components/Login Page/Login";
 import { getTokenFromResponse } from "./Datalayer Files/spotify";
-import Player from "./Components/Player";
+import Player from "./Components/User Page/Player";
 import { useDataLayerValue } from "./Datalayer Files/datalayer";
 
 const spotify = new SpotifyWebApi();
 
 function App() {
-  const [{ token, user }, dispatch] = useDataLayerValue();
+  //Setting a State for the users Login status which is initially flase
+  const [login, setloginstatus] = useState(false);
+
+  //Getting the values from datalayer
+  const [{ user }, dispatch] = useDataLayerValue();
 
   useEffect(() => {
+    //Getting the url parameters from the url
     const hash = getTokenFromResponse();
-    window.location.hash = "";
-    const _token = hash.access_token;
 
-    if (_token) {
+    //Setting back the url to normal after getting token
+    window.location.hash = "";
+
+    const token = hash.access_token;
+
+    if (token) {
       dispatch({
         type: "SET_TOKEN",
         token: token,
       });
 
-      spotify.setAccessToken(_token);
+      spotify.setAccessToken(token);
+
+      //Changing login status to true
+      setloginstatus(true);
+
       spotify.getMe().then((user) => {
         dispatch({
           type: "SET_USER",
@@ -35,12 +47,17 @@ function App() {
           playlist: playlist,
         });
       });
-    }
-  }, []);
 
-  return (
-    <div className="App">{token ? <Player user={user} /> : <Login />}</div>
-  );
+      spotify.getPlaylist("37i9dQZEVXcIJazRV9ISoM").then((response) => {
+        dispatch({
+          type: "SET_DISCOVERWEEKLY",
+          discover_weekly: response,
+        });
+      });
+    }
+  }, window.location);
+
+  return <div className="App">{login ? <Login /> : <Player />}</div>;
 }
 
 export default App;

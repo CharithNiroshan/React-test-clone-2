@@ -4,4 +4,9 @@
   background: linear-gradient(rgb(60, 57, 77), rgba(0, 0, 0, 1));
   color: white;
   padding: 30px;
+  overflow-y: overlay;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
 }

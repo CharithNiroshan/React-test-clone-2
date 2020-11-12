@@ -1,6 +1,6 @@
 import React from "react";
 import "./Login.css";
-import loginurl from "../Datalayer Files/spotify";
+import loginurl from "../../Datalayer Files/spotify";
 
 function Login() {
   return (
