@@ -9,18 +9,15 @@ import { Slider } from "@material-ui/core";
 import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
 import VolumeDownIcon from "@material-ui/icons/VolumeDown";
 import { useDataLayerValue } from "../../../Datalayer Files/datalayer";
+import Songrow from "../Main Parts/Songrow";
 
-function Footer(props) {
-  const [{ playing }, dispatch] = useDataLayerValue();
+function Footer() {
+  const [{ current_track }, dispatch] = useDataLayerValue();
 
   return (
     <div className="footer">
       <div className="footer_left">
-        <img className="albumicon" src="" />
-        <div classname="albumdetails">
-          <h4>Yeah!</h4>
-          <p>Usher</p>
-        </div>
+        {current_track ? <Songrow track={current_track} /> : <></>}
       </div>
       <ul className="footer_center">
         <li>

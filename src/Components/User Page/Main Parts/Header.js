@@ -4,7 +4,7 @@ import React from "react";
 import { useDataLayerValue } from "../../../Datalayer Files/datalayer";
 import "./Header.css";
 
-function Header(props) {
+function Header() {
   const [{ user }, dispatch] = useDataLayerValue();
 
   return (
@@ -14,7 +14,7 @@ function Header(props) {
         <input placeholder="Search for Artist, Songs or Podcasts" type="text" />
       </div>
       <div className="Header_right">
-        <Avatar src={user != null?.images[0]?.url} alt={user?.display_name} />
+        <Avatar src={user?.images[0]?.url} alt={user?.display_name} />
         <h1>{user?.display_name}</h1>
       </div>
     </div>

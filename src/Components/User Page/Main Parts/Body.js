@@ -16,10 +16,9 @@ function Body() {
       <div className="body_songs">
         <Playarea />
         <div className="songs">
-          {discover_weekly !=
-            null?.tracks.items.map((item) => {
-              <Songrow track={item.track} />;
-            })}
+          {discover_weekly?.tracks?.items?.map((item) => {
+            return <Songrow track={item.track} />;
+          })}
         </div>
       </div>
     </div>

@@ -2,7 +2,6 @@ import React from "react";
 import "./Sidebaroption.css";
 
 function SidebarOption(props) {
-  console.log(props);
   return (
     <div className="sidebaroptions">
       {props.icon && <props.icon className="sidebaroption_icon" />}

@@ -8,8 +8,12 @@
 }
 
 .body_play {
-  font-size: 80px;
+  font-size: 80px !important;
   margin: 20px 50px 20px 0px;
+}
+
+.Favorite {
+  font-size: 35px !important;
 }
 
 .body_play:hover {
