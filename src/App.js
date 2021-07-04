@@ -9,8 +9,7 @@ const spotify = new Spotify();
 
 function App() {
   const [accesstoken, setAccessToken] = useState(null);
-
-  const [{ user }, dispatch] = useDataLayerValue();
+  const [{}, dispatch] = useDataLayerValue();
 
   useEffect(() => {
     const hash = getTokenFromResponse();
@@ -32,20 +31,23 @@ function App() {
           type: "SET_USER",
           user: user,
         });
-      });
 
-      spotify.getUserPlaylists().then((playlists) => {
-        dispatch({
-          type: "SET_PLAYLIST",
-          playlist: playlists,
+        spotify.getUserPlaylists().then((playlists) => {
+          playlists.items.map(async (playlist) => {
+            const songs = await spotify.getPlaylist(playlist.id);
+            playlist.tracks = songs.tracks;
+          });
+          dispatch({
+            type: "SET_PLAYLISTS",
+            playlists: playlists,
+          });
         });
-      });
-      //9c378d06a98b4100ba04ddde9e2d7637
 
-      spotify.getPlaylist("37i9dQZEVXcIJazRV9ISoM").then((response) => {
-        dispatch({
-          type: "SET_DISCOVERWEEKLY",
-          discover_weekly: response,
+        spotify.getPlaylist(user.id).then((playlist) => {
+          dispatch({
+            type: "SET_ACTIVEPLAYLIST",
+            playlist: playlist,
+          });
         });
       });
     }

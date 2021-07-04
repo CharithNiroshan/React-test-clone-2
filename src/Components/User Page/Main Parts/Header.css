@@ -1,8 +1,8 @@
 .Header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 30px;
+  justify-content: flex-end;
+  margin-bottom: 10px;
 }
 
 .Header_left {

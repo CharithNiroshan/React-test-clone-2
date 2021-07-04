@@ -12,12 +12,12 @@ import { useDataLayerValue } from "../../../Datalayer Files/datalayer";
 import Songrow from "../Main Parts/Songrow";
 
 function Footer() {
-  const [{ current_track }, dispatch] = useDataLayerValue();
+  const [{ active_track }, dispatch] = useDataLayerValue();
 
   return (
     <div className="footer">
       <div className="footer_left">
-        {current_track ? <Songrow track={current_track} /> : <></>}
+        {active_track ? <Songrow track={active_track} current={true} /> : <></>}
       </div>
       <ul className="footer_center">
         <li>

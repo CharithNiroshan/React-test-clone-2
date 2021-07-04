@@ -22,7 +22,7 @@ export const getTokenFromResponse = () => {
     }, {});
 };
 
-const loginurl = `${authEndpoint}?client_id=${clinetId}&redirect_uri=${redriectUrl}&scope=${scopes.join(
+const loginurl = `${authEndpoint}?client_id=${clinetId}&&redirect_uri=${redriectUrl}&scope=${scopes.join(
   "%20"
 )}&response_type=token&show_dialog=true`;
 

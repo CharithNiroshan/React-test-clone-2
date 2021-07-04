@@ -1,10 +1,10 @@
 .sidebaroptions {
-  color: grey;
+  color: rgb(184, 180, 180);
   cursor: pointer;
   height: 40px;
   display: flex;
   align-items: center;
-  font-size: 12px;
+  font-size: 13px;
   padding: 10px;
   transition: 200ms color ease-in;
 }
@@ -13,10 +13,11 @@
 }
 
 .sidebaroption_icon {
-  margin: 0px 10px;
+  margin: 0px 10px 0px 0px;
+  font-size: 30px !important;
 }
 
-.sidebaroptions > p {
-  margin-top: 10px;
-  font-size: 14px;
+.sidebaroptions > h5 {
+  font-size: 13px;
+  font-weight: 500;
 }

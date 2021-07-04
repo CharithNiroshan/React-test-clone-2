@@ -1,10 +1,10 @@
 .sidebar {
-  height: 90vh;
+  height: 87vh;
   width: 20%;
   min-width: 150px;
   color: white;
   background-color: #040404;
-  padding: 0px 10px;
+  padding: 0px 15px;
   overflow-y: overlay;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .sidebar_logo {
-  width: 100%;
+  width: 70%;
   margin-right: auto;
   padding: 10px;
 }

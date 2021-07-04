@@ -5,7 +5,7 @@
   color: white;
 }
 
-.songrow:hover {
+.noncurrent:hover {
   cursor: pointer;
   background-color: black;
   opacity: 0.8;
@@ -22,7 +22,7 @@
 .songrow_info > p {
   font-size: 1vw;
   margin-top: 3px;
-  color: gray;
+  color: rgb(184, 180, 180);
 }
 
 .songrow_image {

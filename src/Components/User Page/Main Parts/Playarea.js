@@ -8,7 +8,6 @@ function Playarea(props) {
   return (
     <div className="Icons">
       <PlayCircleFilledIcon className="body_play" />
-      <FavoriteIcon className="Favorite" />
       <MoreHorizIcon className="More" />
     </div>
   );

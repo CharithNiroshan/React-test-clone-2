@@ -1,9 +1,9 @@
 .body {
-  height: 100vh;
+  height: 87vh;
   width: 80%;
-  background: linear-gradient(rgb(60, 57, 77), rgba(0, 0, 0, 1));
+  background: linear-gradient(rgb(33, 122, 163), rgba(0, 0, 0, 1));
   color: white;
-  padding: 30px;
+  padding: 20px;
   overflow-y: overlay;
 }
 

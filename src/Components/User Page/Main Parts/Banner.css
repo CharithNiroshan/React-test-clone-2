@@ -2,24 +2,43 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  padding: 10px;
+  margin-bottom: 20px;
 }
 
 .body_infotext {
   flex: 1;
 }
 
-.body_infotext > h2 {
-  font-size: 3vw;
+.body_infotext {
+  font-size: 0.9vw;
+}
+
+.playlist_name {
+  font-size: 4.2vw;
   margin-bottom: 10px;
 }
 
-.body_infotext > p {
+.playlist_description {
   font-size: 1.2vw;
 }
 
-.body_info > img {
+.playlist_image {
   height: 16vw;
   margin: 0 20px;
   box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
+.playlist_info {
+  display: flex;
+  align-items: baseline;
+}
+
+.playlist_owner {
+  font-size: 1.1vw;
+  margin-right: 8px;
+}
+
+.playlist_no_of_songs {
+  font-size: 1.1vw;
+  color: rgb(184, 180, 180);
 }
