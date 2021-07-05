@@ -1,8 +1,7 @@
 .songrow {
-  padding: 20px;
+  padding: 20px 0px;
   display: flex;
   align-items: center;
-  color: white;
 }
 
 .noncurrent:hover {
@@ -17,6 +16,7 @@
 
 .songrow_info > h1 {
   font-size: 1.2vw;
+  font-weight: 500;
 }
 
 .songrow_info > p {
@@ -28,4 +28,36 @@
 .songrow_image {
   height: 40px;
   width: 40px;
+}
+
+.song_index {
+  width: 5%;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.1vw;
+  font-weight: 400;
+}
+
+.song_album {
+  width: 25%;
+  font-size: 1.1vw;
+  font-weight: 400;
+  color: rgb(184, 180, 180);
+}
+
+.song_duration {
+  width: 6%;
+  font-size: 1.1vw;
+  font-weight: 400;
+  color: rgb(184, 180, 180);
+}
+
+.song_detail_container {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.current {
+  width: 100%;
 }

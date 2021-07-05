@@ -1,10 +1,10 @@
 import React from "react";
-import Sidebar from "./Sidebar/Sidebar";
-import Body from "./Main Parts/Body";
-import Footer from "./Footer/Footer";
+import Sidebar from "./User Page/Sidebar/Sidebar";
+import Body from "./User Page/Main Parts/Body";
+import Footer from "./User Page/Footer/Footer";
 import "./Player.css";
 
-function Player(props) {
+function Player() {
   return (
     <div className="player">
       <div className="playerbody">

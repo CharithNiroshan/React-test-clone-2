@@ -23,7 +23,7 @@ function Sidebar() {
       <strong className="sidebar_title">PLAYLISTS</strong>
       <hr />
       {playlists?.items?.map((playlist) => {
-        return <Sidebaroption list={playlist} />;
+        return <Sidebaroption list={playlist} key={playlist.id} />;
       })}
     </div>
   );

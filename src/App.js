@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Spotify from "spotify-web-api-js";
 import Login from "./Components/Login Page/Login";
 import { getTokenFromResponse } from "./Spotify/spotify";
-import Player from "./Components/User Page/Player";
+import Player from "./Components/Player";
 import { useDataLayerValue } from "./Datalayer Files/datalayer";
 
 const spotify = new Spotify();
@@ -31,19 +31,19 @@ function App() {
           type: "SET_USER",
           user: user,
         });
+      });
 
-        spotify.getUserPlaylists().then((playlists) => {
-          playlists.items.map(async (playlist) => {
-            const songs = await spotify.getPlaylist(playlist.id);
-            playlist.tracks = songs.tracks;
-          });
-          dispatch({
-            type: "SET_PLAYLISTS",
-            playlists: playlists,
-          });
+      spotify.getUserPlaylists().then((playlists) => {
+        playlists.items.map(async (playlist) => {
+          const songs = await spotify.getPlaylist(playlist.id);
+          playlist.tracks = songs.tracks;
+        });
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists: playlists,
         });
 
-        spotify.getPlaylist(user.id).then((playlist) => {
+        spotify.getPlaylist(playlists.items?.[0].id).then((playlist) => {
           dispatch({
             type: "SET_ACTIVEPLAYLIST",
             playlist: playlist,

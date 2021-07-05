@@ -3,10 +3,15 @@
   width: 80%;
   background: linear-gradient(rgb(33, 122, 163), rgba(0, 0, 0, 1));
   color: white;
-  padding: 20px;
   overflow-y: overlay;
 }
 
 .body::-webkit-scrollbar {
   display: none;
+}
+
+.body_songs {
+  margin-top: 25px;
+  padding: 0px 30px;
+  background: linear-gradient(rgb(33, 122, 163, 0.15), rgb(27, 21, 21));
 }

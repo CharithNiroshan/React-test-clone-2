@@ -5,29 +5,28 @@ import Header from "./Header";
 import Songrow from "./Songrow";
 import Banner from "./Banner";
 import Playarea from "./Playarea";
-import { ConfirmationNumber } from "@material-ui/icons";
+import Songtabletoprow from "./Songtabletoprow";
 
 function Body() {
-  const [{ active_playlist, playlists }, dispatch] = useDataLayerValue();
+  const [{ active_playlist }, dispatch] = useDataLayerValue();
 
   return (
     <div className="body">
       <Header />
-      {active_playlist ? (
-        <Banner active_playlist={active_playlist} />
-      ) : (
-        <Banner active_playlist={playlists?.items[0]} />
-      )}
+      <Banner active_playlist={active_playlist} />
       <div className="body_songs">
         <Playarea />
         <div className="songs">
-          {active_playlist
-            ? active_playlist?.tracks?.items?.map((item) => {
-                return <Songrow track={item.track} />;
-              })
-            : playlists?.items[0]?.tracks?.items?.map((item) => {
-                return <Songrow track={item.track} />;
-              })}
+          <Songtabletoprow />
+          {active_playlist?.tracks?.items?.map((item, index) => {
+            return (
+              <Songrow
+                track={item?.track}
+                key={item?.track?.id}
+                index={index}
+              />
+            );
+          })}
         </div>
       </div>
     </div>

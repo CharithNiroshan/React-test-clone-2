@@ -3,6 +3,7 @@
   align-items: flex-end;
   justify-content: flex-start;
   margin-bottom: 20px;
+  padding: 0px 10px;
 }
 
 .body_infotext {
@@ -14,16 +15,18 @@
 }
 
 .playlist_name {
-  font-size: 4.2vw;
+  font-size: 6vw;
   margin-bottom: 10px;
 }
 
 .playlist_description {
-  font-size: 1.2vw;
+  font-size: 1.1vw;
+  margin-bottom: 10px;
+  color: rgb(184, 180, 180);
 }
 
 .playlist_image {
-  height: 16vw;
+  height: 18vw;
   margin: 0 20px;
   box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
 }

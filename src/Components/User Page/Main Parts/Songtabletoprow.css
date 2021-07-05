@@ -1,0 +1,31 @@
+.songtabletoprow {
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.1px solid rgb(122, 121, 121);
+  margin-bottom: 10px;
+}
+
+.songtabletoprow > * {
+  font-size: 1.1vw;
+  font-weight: 400;
+  color: rgb(202, 199, 199);
+  text-align: left;
+}
+
+.songtabletoprow_index {
+  text-align: center;
+  width: 5%;
+}
+
+.songtabletoprow_title {
+  width: 60%;
+}
+
+.songtabletoprow_album {
+  width: 25%;
+}
+
+.songtabletoprow_duration {
+  width: 6%;
+}

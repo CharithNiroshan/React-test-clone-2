@@ -12,7 +12,6 @@ function Banner({ active_playlist }) {
       <div className="body_infotext">
         <strong>PLAYLIST</strong>
         <h2 className="playlist_name">{active_playlist?.name}</h2>
-        <p className="playlist_description">{active_playlist?.description}</p>
         <div className="playlist_info">
           <h3 className="playlist_owner">
             {active_playlist?.owner?.display_name}
